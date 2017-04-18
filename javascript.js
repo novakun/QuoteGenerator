@@ -17,20 +17,20 @@ var quotes = [
 
 
 function randomNoRepeats(array) {
-  var copy = array.slice(0);
+  var copyArray = array.slice(0);
   return function() {
-    if (copy.length < 1) { copy = array.slice(0); }
-    var index = Math.floor(Math.random() * copy.length);
-    var item = copy[index];
-    copy.splice(index, 1);
+    if (copyArray.length < 1) { copyArray = array.slice(0); }
+    var index = Math.floor(Math.random() * copyArray.length);
+    var item = copyArray[index];
+    copyArray.splice(index, 1);
     return item;
   };
 }
 
-var chooser = randomNoRepeats(quotes);
+var randomQuote = randomNoRepeats(quotes);
 
 
 function newQuote() {
 
-document.getElementById('quoteDisplay').innerHTML = chooser();
+document.getElementById('quoteDisplay').innerHTML = randomQuote();
 }

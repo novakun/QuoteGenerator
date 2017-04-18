@@ -2,13 +2,23 @@
 <html>
 <head>
 	<title>Quote Generator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<h1>Simple Quote Generator </h1>
-<div id="quoteDisplay" >
-	<!--quotes will be displayed here -->
-</div>
-<button onclick="newQuote()"> New Quote </button>
+  
+<div class="container">
+  <div class="group">
+	<img src="https://media.giphy.com/media/l3q2KjdHeqnYsm8LK/giphy.gif">
+	<button class="button" onclick="newQuote()"> New Quote </button>
+  </div>
+
+  
+	<div class="quoteBubble">
+    
+	<div id="quoteDisplay" ></div>
+	</div>
+	
 
 <script src="javascript.js" ></script>
 </body>
